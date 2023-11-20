@@ -166,6 +166,9 @@
               <Color id="Hand Cursor"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButton4">
           <Properties>
@@ -181,11 +184,14 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/imagenes/inventory_FILL0_wght400_GRAD0_opsz24.png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Stock"/>
+            <Property name="text" type="java.lang.String" value="Producto"/>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
               <Color id="Hand Cursor"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton4ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButton5">
           <Properties>
@@ -313,12 +319,7 @@
                                           <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
                                           <Component id="txt_precio_venta" min="-2" pref="89" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
-                                          <Component id="txt_stock_venta" min="-2" pref="108" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="179" max="-2" attributes="0"/>
                                       <Component id="btn_borrar_venta" min="-2" pref="58" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -380,7 +381,6 @@
                                       <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -388,7 +388,6 @@
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="txt_precio_venta" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="txt_cantidad_venta" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="txt_stock_venta" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="txt_formaPago" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="txt_descripcion_venta" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="txt_codigo_venta" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -464,17 +463,6 @@
                 <Property name="text" type="java.lang.String" value="Precio"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel5">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="12" style="1"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="66" green="0" red="cc" type="rgb"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Stock Disponible"/>
-              </Properties>
-            </Component>
             <Component class="javax.swing.JButton" name="btn_borrar_venta">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -498,6 +486,7 @@
             <Component class="javax.swing.JTextField" name="txt_codigo_venta">
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_codigo_ventaActionPerformed"/>
+                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_codigo_ventaKeyPressed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="txt_precio_venta">
@@ -506,8 +495,6 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="txt_cantidad_venta">
-            </Component>
-            <Component class="javax.swing.JTextField" name="txt_stock_venta">
             </Component>
             <Container class="javax.swing.JScrollPane" name="jScrollPane1">
               <AuxValues>
@@ -701,6 +688,10 @@
                                   <Component id="txt_run_cliente" max="32767" attributes="0"/>
                               </Group>
                           </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              <Component id="txt_id_cliente" min="-2" pref="32" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jScrollPane2" min="-2" pref="801" max="-2" attributes="0"/>
@@ -748,7 +739,9 @@
                                   <Component id="jLabel17" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="txt_razonSocial_cliente" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="txt_id_cliente" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Component id="btn_actualizar_cliente" max="32767" attributes="0"/>
                                   <Component id="btn_guardar_cliente" min="-2" pref="58" max="-2" attributes="0"/>
@@ -872,6 +865,9 @@
                   <Color id="Hand Cursor"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_actualizar_clienteActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btn_borrar_cliente">
               <Properties>
@@ -888,6 +884,9 @@
                   <Color id="Hand Cursor"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_borrar_clienteActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btn_nuevo_cliente">
               <Properties>
@@ -895,12 +894,15 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/imagenes/person_add_FILL0_wght400_GRAD0_opsz24.png"/>
+                  <Image iconType="3" name="/imagenes/cleaning_services_FILL0_wght400_GRAD0_opsz24.png"/>
                 </Property>
                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                   <Color id="Hand Cursor"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_nuevo_clienteActionPerformed"/>
+              </Events>
             </Component>
             <Container class="javax.swing.JScrollPane" name="jScrollPane2">
               <AuxValues>
@@ -971,9 +973,14 @@
                       <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="table_clienteMouseClicked"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
+            <Component class="javax.swing.JTextField" name="txt_id_cliente">
+            </Component>
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="Pnl_proveedor">
@@ -989,39 +996,45 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabel22" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel23" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel24" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel21" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel20" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel19" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel18" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jLabel22" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel23" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel24" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel21" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel20" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel19" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel18" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="txt_run_proveedor" pref="151" max="32767" attributes="0"/>
+                                      <Component id="txt_nombre_proveedor" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="txt_telefono_proveedor" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="txt_direccion_proveedor" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="txt_razonSocial_proveedor" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="txt_tipoProducto_proveedor" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="txt_region_proveedor" alignment="0" max="32767" attributes="0"/>
+                                  </Group>
                               </Group>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="txt_run_proveedor" pref="151" max="32767" attributes="0"/>
-                                  <Component id="txt_nombre_proveedor" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="txt_telefono_proveedor" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="txt_direccion_proveedor" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="txt_razonSocial_proveedor" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="txt_tipoProducto_proveedor" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="cbx_region_proveedor" alignment="0" max="32767" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="btn_guardar_proveedor" pref="99" max="32767" attributes="0"/>
+                                      <Component id="btn_eliminar_proveedor" max="32767" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="btn_nuevo_proveedor" pref="100" max="32767" attributes="0"/>
+                                      <Component id="btn_actualizar_proveedor" max="32767" attributes="0"/>
+                                  </Group>
                               </Group>
                           </Group>
-                          <Group type="102" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="btn_guardar_proveedor" pref="99" max="32767" attributes="0"/>
-                                  <Component id="btn_eliminar_proveedor" max="32767" attributes="0"/>
-                              </Group>
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="btn_nuevo_proveedor" pref="100" max="32767" attributes="0"/>
-                                  <Component id="btn_actualizar_proveedor" max="32767" attributes="0"/>
-                              </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="200" max="-2" attributes="0"/>
+                              <Component id="txt_id_proveedor" min="-2" pref="42" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -1057,7 +1070,7 @@
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel24" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="cbx_region_proveedor" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txt_region_proveedor" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
@@ -1069,7 +1082,9 @@
                                   <Component id="jLabel23" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="txt_tipoProducto_proveedor" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="txt_id_proveedor" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Component id="btn_actualizar_proveedor" pref="59" max="32767" attributes="0"/>
                                   <Component id="btn_guardar_proveedor" max="32767" attributes="0"/>
@@ -1081,7 +1096,7 @@
                               </Group>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
-                          <Component id="jScrollPane3" alignment="0" pref="586" max="32767" attributes="0"/>
+                          <Component id="jScrollPane3" alignment="0" pref="589" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -1170,6 +1185,9 @@
                   <Color id="Hand Cursor"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_eliminar_proveedorActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btn_actualizar_proveedor">
               <Properties>
@@ -1183,6 +1201,9 @@
                   <Color id="Hand Cursor"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_actualizar_proveedorActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btn_nuevo_proveedor">
               <Properties>
@@ -1190,7 +1211,7 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/imagenes/person_add_FILL0_wght400_GRAD0_opsz24.png"/>
+                  <Image iconType="3" name="/imagenes/cleaning_services_FILL0_wght400_GRAD0_opsz24.png"/>
                 </Property>
                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                   <Color id="Hand Cursor"/>
@@ -1210,7 +1231,8 @@
                 <Component class="javax.swing.JTable" name="table_proveedor">
                   <Properties>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                      <Table columnCount="7" rowCount="0">
+                      <Table columnCount="8" rowCount="0">
+                        <Column editable="true" title="ID" type="java.lang.Object"/>
                         <Column editable="true" title="RUN" type="java.lang.Object"/>
                         <Column editable="true" title="Nombre" type="java.lang.Object"/>
                         <Column editable="true" title="Telefono" type="java.lang.Object"/>
@@ -1222,6 +1244,11 @@
                     </Property>
                     <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
                       <TableColumnModel selectionModel="0">
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="35" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
                         <Column maxWidth="-1" minWidth="-1" prefWidth="100" resizable="true">
                           <Title/>
                           <Editor/>
@@ -1263,6 +1290,9 @@
                       <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="table_proveedorMouseClicked"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
@@ -1284,15 +1314,9 @@
                 <Property name="text" type="java.lang.String" value="Region"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JComboBox" name="cbx_region_proveedor">
-              <Properties>
-                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="0"/>
-                </Property>
-              </Properties>
-              <AuxValues>
-                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-              </AuxValues>
+            <Component class="javax.swing.JTextField" name="txt_region_proveedor">
+            </Component>
+            <Component class="javax.swing.JTextField" name="txt_id_proveedor">
             </Component>
           </SubComponents>
         </Container>
@@ -1304,8 +1328,8 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="Stock">
-                <Property name="tabTitle" type="java.lang.String" value="Stock"/>
+              <JTabbedPaneConstraints tabName="Producto">
+                <Property name="tabTitle" type="java.lang.String" value="Producto"/>
               </JTabbedPaneConstraints>
             </Constraint>
           </Constraints>
@@ -1323,8 +1347,8 @@
                                   </Group>
                                   <EmptySpace min="18" max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="txt_descripcion_stock" pref="139" max="32767" attributes="0"/>
-                                      <Component id="txt_cantidad_stock" max="32767" attributes="0"/>
+                                      <Component id="txt_descripcion_producto" pref="139" max="32767" attributes="0"/>
+                                      <Component id="txt_cantidad_producto" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="102" attributes="0">
@@ -1337,8 +1361,11 @@
                                           </Group>
                                           <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="txt_precio_stock" max="32767" attributes="0"/>
-                                              <Component id="cbx_proveedor_stock" max="32767" attributes="0"/>
+                                              <Group type="102" attributes="0">
+                                                  <Component id="txt_proveedor_producto" min="-2" pref="139" max="-2" attributes="0"/>
+                                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                              </Group>
+                                              <Component id="txt_precio_producto" max="32767" attributes="0"/>
                                           </Group>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
@@ -1346,7 +1373,7 @@
                                               <Group type="102" alignment="0" attributes="0">
                                                   <Component id="jLabel25" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
-                                                  <Component id="txt_codigo_stock" pref="139" max="32767" attributes="0"/>
+                                                  <Component id="txt_codigo_producto" pref="139" max="32767" attributes="0"/>
                                               </Group>
                                               <Group type="102" alignment="0" attributes="0">
                                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -1365,9 +1392,9 @@
                                   </Group>
                               </Group>
                           </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
-                              <Component id="btn_imprimir_stock" min="-2" pref="100" max="-2" attributes="0"/>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="txt_id_producto" min="-2" pref="36" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -1384,29 +1411,31 @@
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel25" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="txt_codigo_stock" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txt_codigo_producto" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel26" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="txt_descripcion_stock" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txt_descripcion_producto" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel27" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="txt_cantidad_stock" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txt_cantidad_producto" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel28" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="txt_precio_stock" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txt_precio_producto" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel29" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="cbx_proveedor_stock" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txt_proveedor_producto" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+                              <Component id="txt_id_producto" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="btn_actualizar_stock" alignment="0" min="-2" pref="58" max="-2" attributes="0"/>
                                   <Component id="btn_guardar_stock" min="-2" pref="58" max="-2" attributes="0"/>
@@ -1416,12 +1445,10 @@
                                   <Component id="btn_eliminar_stock" min="-2" pref="51" max="-2" attributes="0"/>
                                   <Component id="btn_nuevo_stock" min="-2" pref="51" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="btn_imprimir_stock" min="-2" pref="55" max="-2" attributes="0"/>
                           </Group>
                           <Component id="jScrollPane4" min="-2" pref="456" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="82" max="32767" attributes="0"/>
+                      <EmptySpace pref="139" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1467,26 +1494,16 @@
                 <Property name="text" type="java.lang.String" value="Proveedor"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="txt_codigo_stock">
+            <Component class="javax.swing.JTextField" name="txt_codigo_producto">
             </Component>
-            <Component class="javax.swing.JTextField" name="txt_descripcion_stock">
+            <Component class="javax.swing.JTextField" name="txt_descripcion_producto">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_descripcion_stockActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_descripcion_productoActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="txt_cantidad_stock">
+            <Component class="javax.swing.JTextField" name="txt_cantidad_producto">
             </Component>
-            <Component class="javax.swing.JTextField" name="txt_precio_stock">
-            </Component>
-            <Component class="javax.swing.JComboBox" name="cbx_proveedor_stock">
-              <Properties>
-                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="0"/>
-                </Property>
-              </Properties>
-              <AuxValues>
-                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-              </AuxValues>
+            <Component class="javax.swing.JTextField" name="txt_precio_producto">
             </Component>
             <Container class="javax.swing.JScrollPane" name="jScrollPane4">
               <AuxValues>
@@ -1498,21 +1515,33 @@
                 <Component class="javax.swing.JTable" name="table_stock">
                   <Properties>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                      <Table columnCount="4" rowCount="0">
+                      <Table columnCount="6" rowCount="0">
+                        <Column editable="true" title="Id" type="java.lang.Object"/>
                         <Column editable="true" title="Codigo" type="java.lang.Object"/>
                         <Column editable="true" title="Descripcion" type="java.lang.Object"/>
+                        <Column editable="true" title="Cantidad" type="java.lang.Object"/>
                         <Column editable="true" title="Precio" type="java.lang.Object"/>
                         <Column editable="true" title="Proveedor" type="java.lang.Object"/>
                       </Table>
                     </Property>
                     <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
                       <TableColumnModel selectionModel="0">
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="35" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
                         <Column maxWidth="-1" minWidth="-1" prefWidth="100" resizable="true">
                           <Title/>
                           <Editor/>
                           <Renderer/>
                         </Column>
                         <Column maxWidth="-1" minWidth="-1" prefWidth="100" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                           <Title/>
                           <Editor/>
                           <Renderer/>
@@ -1533,6 +1562,9 @@
                       <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="table_stockMouseClicked"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
@@ -1548,6 +1580,9 @@
                   <Color id="Hand Cursor"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_guardar_stockActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btn_actualizar_stock">
               <Properties>
@@ -1561,6 +1596,9 @@
                   <Color id="Hand Cursor"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_actualizar_stockActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btn_eliminar_stock">
               <Properties>
@@ -1577,6 +1615,9 @@
                   <Color id="Hand Cursor"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_eliminar_stockActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btn_nuevo_stock">
               <Properties>
@@ -1584,7 +1625,7 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/imagenes/person_add_FILL0_wght400_GRAD0_opsz24.png"/>
+                  <Image iconType="3" name="/imagenes/cleaning_services_FILL0_wght400_GRAD0_opsz24.png"/>
                 </Property>
                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                   <Color id="Hand Cursor"/>
@@ -1594,18 +1635,9 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_nuevo_stockActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="btn_imprimir_stock">
-              <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="c5" green="96" red="c8" type="rgb"/>
-                </Property>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/imagenes/print_FILL0_wght400_GRAD0_opsz24.png"/>
-                </Property>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_imprimir_stockActionPerformed"/>
-              </Events>
+            <Component class="javax.swing.JTextField" name="txt_id_producto">
+            </Component>
+            <Component class="javax.swing.JTextField" name="txt_proveedor_producto">
             </Component>
           </SubComponents>
         </Container>
